@@ -1,0 +1,205 @@
+/* Import Fonts from Google Fonts 
+        font-family: 'Monoton', cursive;
+        font-family: 'Poppins', sans-serif;
+        font-family: 'Press Start 2P', cursive;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Poppins:wght@200;300&family=Press+Start+2P&display=swap');
+
+/* Global Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 50px;
+  /*  font-family: 'Press Start 2P', cursive; */
+    padding: 30px 0 0 30px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url("../images/jene-stephaniuk-lkmGeyLItrw-unsplash.jpg");
+    background-position: top;
+    background-size: cover;
+}
+
+a {
+    color: orangered;
+    text-decoration: none;
+}
+
+a:hover {
+    color: goldenrod;
+    text-decoration: underline;
+}
+
+/* Navigation bar styles */
+
+nav {
+    display: flex;
+    justify-content: flex-start;
+    background-color:rgba(0, 0, 0, .8);
+    color: whitesmoke;
+}
+
+nav ul {
+    margin: 10px 0 10px 20px;
+}
+
+nav ul li {
+    display: inline;
+    list-style-type: none;
+    flex-basis: 200px;
+    padding: 15px 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+nav ul li a:hover {
+    color: orangered;
+}
+
+
+/* Section styles */
+
+section {
+    padding: 40px;
+    /* border: 2px white solid; */
+    margin-left: 260px;
+}
+
+section h2 {
+    background-color: black;
+    color: whitesmoke;
+    padding: 15px;
+    display: inline-block;
+    border-top-right-radius: 25px;
+}
+
+/* Header Section Styles */
+header {
+    background-color: black;
+    color: whitesmoke;
+    width: 100%;
+}
+
+
+/* Bio Section Styles */
+.bio {
+    /* width: 100%; */
+    /* display: flex; */
+}
+
+.bio img {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    border: 2px black solid;
+    position: absolute;
+    left: 20px;
+    top: 250px;
+}
+
+ .bio div {
+    padding: 20px;
+}  
+
+.bio p {
+    margin: 10px 0 10px 0;
+}
+
+.section-bg {
+    background-color: rgba(255, 255, 255, .8);
+    border-bottom-left-radius: 25px;
+} 
+
+
+/* Portfolio Section Styles */
+
+.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 600px;
+    /* float: right; */
+    padding-left: 40px;
+    background-color: rgba(255, 255, 255, .8);
+    border-bottom-left-radius: 25px;
+}
+
+.sample {
+    background-color: black;
+    border: 1px solid pink;
+    color: wheat;
+    width: 240px;
+    line-height: 120px;
+    text-align: center;
+    margin: 10px;
+    border-bottom-left-radius: 25px;
+}
+
+.sample:first-child { 
+    width: 500px;
+    line-height: 240px;
+}
+
+.sample:hover {
+    opacity: 50%;
+}
+
+@media screen and (max-width: 700px) {
+    .sample:first-child {
+        width: 100%;
+        line-height: 120px;
+    }
+    .sample {
+        width: 100%;
+    }
+}
+
+/* Contact section styles */
+
+.skills {
+    background-color: rgba(255, 255, 255, .8);
+    border-bottom-left-radius: 25px;
+    padding: 20px;
+}
+
+.skills ul {
+    margin: 15px;
+}
+
+.skills ul li {
+    display: inline;
+    /* list-style-type: none; */
+    /* flex-basis: 200px; */
+    padding: 10px 15px;
+    background-color: orangered;
+    color: white;
+}
+
+.skills ul li:hover {
+    background-color: black;
+    transform: scale(1.1);
+}
+
+/* Footer Styles */
+
+footer {
+    background-color:rgba(0, 0, 0, .8);
+    color: white;
+}
+
+footer ul li {
+    display: inline;
+    padding: 5px;
+}
+
+footer ul li a {
+    transform: scale(1.1);
+}
