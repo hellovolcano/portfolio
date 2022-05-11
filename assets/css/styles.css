@@ -17,13 +17,14 @@ h1 {
     font-size: 50px;
   /*  font-family: 'Press Start 2P', cursive; */
     padding: 30px 0 0 30px;
+    display: flex;
+    justify-content: flex-start;
+    text-shadow: 1px 1px black;
 }
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-image: url("../images/jene-stephaniuk-lkmGeyLItrw-unsplash.jpg");
-    background-position: top;
-    background-size: cover;
+    background-color: rgb(30, 30, 30);
 }
 
 a {
@@ -41,8 +42,13 @@ a:hover {
 nav {
     display: flex;
     justify-content: flex-start;
-    background-color:rgba(0, 0, 0, .8);
+    background-color:rgba(0, 0, 0, .75);
     color: whitesmoke;
+    background-image: url("../images/jene-stephaniuk-lkmGeyLItrw-unsplash.jpg");
+    background-position: 80%;
+    background-size: cover;
+    background-attachment: fixed;
+    /* opacity: 50%; */
 }
 
 nav ul {
@@ -54,11 +60,13 @@ nav ul li {
     list-style-type: none;
     flex-basis: 200px;
     padding: 15px 20px;
+    opacity: 100%;
 }
 
 nav ul li a {
     text-decoration: none;
     color: whitesmoke;
+    opacity: 100%;
 }
 
 nav ul li a:hover {
@@ -71,11 +79,11 @@ nav ul li a:hover {
 section {
     padding: 40px;
     /* border: 2px white solid; */
-    margin-left: 260px;
+    margin-left: 350px;
 }
 
 section h2 {
-    background-color: black;
+    background-color: orangered;
     color: whitesmoke;
     padding: 15px;
     display: inline-block;
@@ -84,17 +92,17 @@ section h2 {
 
 /* Header Section Styles */
 header {
-    background-color: black;
+    /* background-color: black; */
     color: whitesmoke;
     width: 100%;
+    background-position: 80%;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url("../images/jene-stephaniuk-lkmGeyLItrw-unsplash.jpg");
 }
 
 
 /* Bio Section Styles */
-.bio {
-    /* width: 100%; */
-    /* display: flex; */
-}
 
 .bio img {
     height: 250px;
@@ -136,31 +144,23 @@ header {
     background-color: black;
     border: 1px solid pink;
     color: wheat;
-    width: 240px;
-    line-height: 120px;
+    width: 350px;
+    line-height: 200px;
     text-align: center;
     margin: 10px;
     border-bottom-left-radius: 25px;
 }
 
 .sample:first-child { 
-    width: 500px;
-    line-height: 240px;
+    width: 1000px;
+    line-height: 400px;
 }
 
 .sample:hover {
     opacity: 50%;
 }
 
-@media screen and (max-width: 700px) {
-    .sample:first-child {
-        width: 100%;
-        line-height: 120px;
-    }
-    .sample {
-        width: 100%;
-    }
-}
+
 
 /* Contact section styles */
 
@@ -171,7 +171,7 @@ header {
 }
 
 .skills ul {
-    margin: 15px;
+    margin: 25px;
 }
 
 .skills ul li {
@@ -185,7 +185,10 @@ header {
 
 .skills ul li:hover {
     background-color: black;
-    transform: scale(1.1);
+}
+
+.portfolio {
+    align-items: center;
 }
 
 /* Footer Styles */
@@ -202,4 +205,28 @@ footer ul li {
 
 footer ul li a {
     transform: scale(1.1);
+}
+
+@media screen and (max-width: 700px) {
+    .sample:first-child {
+        width: 100%;
+        line-height: 120px;
+    }
+    .sample {
+        width: 100%;
+    }
+    .bio {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bio img {
+        position: inherit;
+        height: 150px;
+        width: 150px;
+    }
+
+    section {
+        margin: 2px;
+    }
 }
