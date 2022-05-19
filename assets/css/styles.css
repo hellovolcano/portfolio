@@ -134,7 +134,7 @@ header {
     top: 232px;
 }
 
- .bio div {
+.bio div {
     padding: 20px;
 }  
 
@@ -153,34 +153,55 @@ header {
 .portfolio {
     display: flex;
     flex-wrap: wrap;
-    max-width: 600px;
+    /* max-width: 600px; */
     /* float: right; */
     padding-left: 40px;
     background-color: rgba(255, 255, 255, .8);
     border-bottom-left-radius: 25px;
 }
 
-.sample {
-    background-color: black;
-    border: 1px solid pink;
+
+.sample img {
+    border: 1px solid black;
     color: wheat;
-    width: 350px;
-    line-height: 200px;
+    width: 400px;
     text-align: center;
     margin: 10px;
     border-bottom-left-radius: 25px;
-}
-
-.sample:first-child { 
-    width: 1000px;
-    line-height: 400px;
-}
-
-.sample:hover {
+    transform: scale();
     opacity: 50%;
 }
 
+/* .sample:first-child { 
+    width: 600px;
+}  */
 
+.sample:first-child img {
+    width: 820px;
+}
+
+.sample:first-child h3 {
+    top:500px;
+}
+
+.sample h3 {
+    position: relative;
+    z-index: 100;
+    background-color: black;
+    color: whitesmoke;
+    top: 240px;
+    margin: 0 10px;
+    display: block;
+    padding: 15px;
+}
+.sample img:hover {
+    opacity: 100%;
+}
+
+/* Hiding the description for now */
+p.overview  {
+    display: none;
+}
 
 /* Contact section styles */
 
@@ -198,22 +219,6 @@ header {
     margin: 5px 10px;
 }
 
-/* .skills ul {
-    margin: 25px;
-}
-
-.skills ul li {
-    display: inline;
-    /* list-style-type: none; */
-    /* flex-basis: 200px; */
-    /* padding: 10px 15px;
-    background-color: orangered;
-    color: white;
-}
-
-.skills ul li:hover {
-    background-color: black;
-} */ 
 
 .portfolio {
     align-items: center;
@@ -228,14 +233,43 @@ footer {
     text-align: right;
 }
 
-@media screen and (max-width: 700px) {
-    .sample:first-child {
-        width: 100%;
-        line-height: 120px;
+@media screen and (max-width: 1330px) {
+    .sample:first-child img {
+        width: 400px;
     }
-    .sample {
-        width: 100%;
+
+    .sample:first-child h3 {
+        padding: 10px;
+        top: 240px;
     }
+}
+
+@media screen and (max-width: 1024px) {
+    #portfolio, #contact {
+        margin: 2px;
+    }
+
+    .sample img {
+        width: 200px;
+    }
+
+    .sample:first-child img {
+        width: 200px;
+    } 
+
+    .sample h3 {
+        top: 140px;
+        padding: 10px;
+    }
+
+    .sample:first-child h3 {
+        top: 140px;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 786px) {
+
     .bio {
         display: flex;
         flex-direction: column;
