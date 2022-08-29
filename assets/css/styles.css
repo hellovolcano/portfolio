@@ -1,9 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Poppins:wght@100;300&display=swap');
+
+:root {
+    --primary-color: #303b47;
+    --secondary-color: #66454f;
+    --highlight: #666445;
+    --white: antiquewhite;
+}
+
 /* Import Fonts from Google Fonts 
         font-family: 'Monoton', cursive;
         font-family: 'Poppins', sans-serif;
         font-family: 'Press Start 2P', cursive;
 */
-@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Poppins:wght@200;300&family=Press+Start+2P&display=swap');
+
 
 /* Global Styles */
 
@@ -13,28 +22,45 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: var(--white);
+}
+
 h1 {
-    font-size: 50px;
+    font-size: 72px;
   /*  font-family: 'Press Start 2P', cursive; */
     padding: 30px 0 0 30px;
     display: flex;
     justify-content: flex-start;
-    text-shadow: 1px 1px black;
+    text-shadow: 2px 2px 5px black;
+    color: var(--white);
+}
+
+h1, h2, h3 {
+    font-family: 'Amatic SC', sans-serif;
+}
+
+h2 {
+    font-size: 48px;
+}
+
+h3 {
+    font-size: 36px;
 }
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: rgb(30, 30, 30);
-    background-image: url("../images/leon-bredella-W0xoY3dBRlM-unsplash.jpg");
+    /* background-color: rgb(30, 30, 30); */
+    width: 100%;
 }
 
 a {
-    color: orangered;
+    color: var(--secondary-color);
     text-decoration: none;
 }
 
 a:hover {
-    color: goldenrod;
+    color: var(--highlight);
     text-decoration: none;
 }
 
@@ -43,12 +69,12 @@ a:hover {
 nav {
     display: flex;
     justify-content: flex-start;
-    background-color:rgba(0, 0, 0, .75);
-    color: whitesmoke;
+    color: var(--white);
     /* background-image: url("../images/leon-bredella-W0xoY3dBRlM-unsplash.jpg"); */
     background-position: 80%;
     background-size: cover;
     background-attachment: fixed;
+    padding-top: 15px;
     /* opacity: 50%; */
 }
 
@@ -66,13 +92,13 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: whitesmoke;
+    color: var(--white);
     opacity: 100%;
     padding: 10px;
 }
 
 nav ul li a:hover {
-    color: black; 
+    color: var(--white); 
     animation-duration: 1s;
     animation-fill-mode: forwards;
     animation-name: fadein;
@@ -84,7 +110,7 @@ nav ul li a:hover {
     }
 
     to {
-        background-color: orangered;
+        background-color: var(--highlight);
         border-top-right-radius: 15px;
         border-bottom-left-radius: 15px;
     }
@@ -98,44 +124,59 @@ nav ul li a:hover {
 /* Section styles */
 
 section {
-    padding: 40px;
+    /* padding: 40px; */
     /* border: 2px white solid; */
-    margin-left: 350px;
+    background-color: var(--white);
+    width: 100%;
 }
 
 section h2 {
-    background-color: orangered;
-    color: whitesmoke;
-    padding: 15px;
+    /* background-color: var(--secondary-color); */
+    color: var(--primary-color);
+    padding: 25px 0;
     display: inline-block;
-    border-top-right-radius: 25px;
+    /* border-top-right-radius: 25px; */
     text-shadow: 2px 2px 5px black;
+    text-transform: uppercase;
 }
 
 /* Header Section Styles */
 header {
-    background-color: rgba(0, 0, 0, .75);
-    color: whitesmoke;
+    background-image: 
+    linear-gradient(to right, rgba(0,0,0,.9), rgba(255,255,255,0)),
+    url("../images/bailey-anselme-eN5axbs60Po-unsplash.jpg");
+    background-attachment: fixed;
+    background-position: 80%;
+    color: var(--white);
     width: 100%;
 }
 
 
 /* Bio Section Styles */
 
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
 .bio img {
     height: 250px;
     width: 250px;
     /* border-radius: 50%; */
-    border-top-left-radius: 25%;
-    border-bottom-right-radius: 25%;
-    border: 2px whitesmoke solid;
-    position: absolute;
-    left: 50px;
-    top: 232px;
+    border-radius: 50%;
+    border: 2px var(--white) solid;
+    /* position: relative; */
+    /* left: 50px;
+    top: 232px; */
+    float: left;
+    margin-right: 25px;
+    
 }
 
 .bio div {
-    padding: 20px;
+    padding: 15px;
+    /* float: left; */
 }  
 
 .bio p {
@@ -143,70 +184,103 @@ header {
 }
 
 .section-bg {
-    background-color: rgba(255, 255, 255, .8);
-    border-bottom-left-radius: 25px;
+    background-color: rgba(255, 255, 255, .5);
+    height: 100%;
 } 
 
+.bio {
+    background-image: 
+    linear-gradient(to right, rgba(0,0,0,.9), rgba(255,255,255,0)),
+    url("../images/bailey-anselme-eN5axbs60Po-unsplash.jpg");
+    background-attachment: fixed;
+    background-position: 80%;
+}
+
+.bio div {
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px 10px;
+}
+
+.bio-text {
+    margin-left: 25px;
+    background-color: rgba(255, 255, 255, .4);
+    border-top-left-radius: 25%;
+    border-bottom-right-radius: 25%;
+}
+
+
+.intro-text h3 {
+    color: var(--white);
+    font-size: 48px;
+}
+
+.intro-text p {
+    color: var(--white);
+    font-size: 24px;
+}
+
+.about {
+    width: 60%;
+    margin: 0 auto;
+    padding: 25px;
+    background-color: var(--white);
+}
+
+.about p {
+    padding: 10px 0;
+}
 
 /* Portfolio Section Styles */
 
 .portfolio {
-    display: flex;
-    flex-wrap: wrap;
-    /* max-width: 600px; */
-    /* float: right; */
-    padding-left: 40px;
-    background-color: rgba(255, 255, 255, .8);
-    border-bottom-left-radius: 25px;
+
+    background-color: var(--highlight);
+    width: 100%;
 }
 
+.portfolio-div {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.portfolio h2 {
+    margin-left: 50px;
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+.sample {
+    background-color: var(--white);
+    color: var(--primary-color);
+    flex: 1;
+    margin: 20px;
+}
+
+.sample-text {
+    line-height: 1.3;
+    padding: 25px;
+}
 
 .sample img {
-    border: 1px solid black;
-    color: wheat;
-    width: 400px;
-    text-align: center;
-    margin: 10px;
-    border-bottom-left-radius: 25px;
-    transform: scale();
+    /* border: 1px solid black; */
+    width: 100%;
+    /* transform: scale(); */
     opacity: 50%;
 }
 
-/* .sample:first-child { 
-    width: 600px;
-}  */
 
-.sample:first-child img {
-    width: 820px;
-}
-
-.sample:first-child h3 {
-    top:500px;
-}
-
-.sample h3 {
-    position: relative;
-    z-index: 100;
-    background-color: black;
-    color: whitesmoke;
-    top: 240px;
-    margin: 0 10px;
-    display: block;
-    padding: 15px;
-}
 .sample img:hover {
     opacity: 100%;
 }
 
-/* Hiding the description for now */
-p.overview  {
-    display: none;
-}
 
 /* Contact section styles */
 
 .contact {
-    background-color: rgba(255, 255, 255, .8);
+    background-color: var(--white);
     border-bottom-left-radius: 25px;
     padding: 20px;
     display: flex;
@@ -219,52 +293,29 @@ p.overview  {
     margin: 5px 10px;
 }
 
-
-.portfolio {
-    align-items: center;
+#contact h2 {
+    margin-left: 50px;
 }
+
+
 
 /* Footer Styles */
 
 footer {
-    background-color:rgba(0, 0, 0, .8);
-    color: white;
+    background-color: var(--secondary-color);
+    color: var(--white);
     padding: 15px;
     text-align: right;
 }
 
-@media screen and (max-width: 1330px) {
-    .sample:first-child img {
-        width: 400px;
-    }
-
-    .sample:first-child h3 {
-        padding: 10px;
-        top: 240px;
-    }
+footer a {
+    color: var(--white);
 }
+
 
 @media screen and (max-width: 1024px) {
     #portfolio, #contact {
         margin: 2px;
-    }
-
-    .sample img {
-        width: 200px;
-    }
-
-    .sample:first-child img {
-        width: 200px;
-    } 
-
-    .sample h3 {
-        top: 140px;
-        padding: 10px;
-    }
-
-    .sample:first-child h3 {
-        top: 140px;
-        padding: 10px;
     }
 }
 
@@ -285,48 +336,3 @@ footer {
         margin: 2px;
     }
 }
-
-/* ------------------------------------------ */
-/* Experimenting with drop-down menu configuration */
-
-/* @media screen and (max-width: 468px) { */
-    /* nav ul {
-        display: none;
-    } */
-
-    /* .nav-toggle {
-        display: flex;
-        justify-content: flex-end;
-    } */
-
-    /* .nav-toggle p {
-        display: inline-block;
-    } */
-
-    /* nav {
-        background-color:rgb(30, 30, 30);
-        background-image: url("");
-    }
-    .dropdown p {
-        display: flex;
-        justify-content: flex-end;
-    }
-    .dropdown {
-        position: relative;
-        display: inline-block;
-      }
-      
-      .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: orangered;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        padding: 12px 16px;
-        z-index: 1;
-      }
-      
-      .dropdown:hover .dropdown-content {
-        display: block;
-      } */
-/* } */

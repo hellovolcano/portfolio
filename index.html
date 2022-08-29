@@ -8,62 +8,71 @@
     </head>
     <body>
         <header>
-            <h1>Valerie Gleason</h1>
+            <nav class="dropdown">
+                <ul class="dropdown-content">
+                    <li><a href="#about">About me</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </header>
-        <nav class="dropdown">
-            <ul class="dropdown-content">
-                <li><a href="#about">About me</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <section class="bio" id="about">
-            <div>
+        <section class="bio">
+            <div class="clearfix">
+
                 <img src="./assets/images/1602010988817.jpeg" alt="Picture of Valerie Gleason">
-            </div> 
-                <h2>Hello, I'm Valerie.</h2>
-                <div class="section-bg">
-                    <p>I have 14 years of experience in the tech industry, finding success first as a technical writer and then as a software project manager. To put it another way: software has been the focus of my career for over a decade, and pursuing my passion in web development is the natural next step in my career.</p>
-                    <p>I'm looking to join a team of learners figuring how to solve challenging problems together. Think we'd be a good match? <a href="#contact">Reach out!</a></p>
+                <div class="intro-text">
+                    <h1>Hi, I'm Valerie.</h1>
+                    <p>I'm a full-stack web developer.</p>
+                </div>
             </div>
         </section>
-        <section id="portfolio">
+        <section id="about" class="about">
+            <h2>about me</h2>
+            <p>I have 14 years of experience in the tech industry, finding success first as a technical writer and then as a software project manager. To put it another way: software has been the focus of my career for over a decade, and pursuing my passion in web development is the natural next step in my career.</p>
+            <p>I'm looking to join a team of learners figuring how to solve challenging problems together. Think we'd be a good match? <a href="#contact">Reach out!</a></p>
+        </section>
+        <section id="portfolio" class="portfolio">
             <h2>Portfolio</h2>
-            <div class="portfolio">
+            <div class="portfolio-div">
                 <div class="sample">
-                    <h3>
-                        iStream uStream
-                    </h3>
-                    <p class="overview">The iStream uStream app allows you to find streaming links to any movie you search for. Built using Vanilla JavaScript & Materialize.</p>
-                    <a href="https://hellovolcano.github.io/random-movie-recs" target="_blank"><img src="assets/images/istreamUstream.png" alt="Screenshot of the iStream uStream application"></a>
+                    <img src="assets/images/istreamUstream.png" alt="Screenshot of the iStream uStream application">
+                    <div class="sample-text">
+                        <h3>
+                            iStream uStream
+                        </h3>
+                        <p>The iStream uStream app allows you to find streaming links to any movie you search for. Built using Vanilla JavaScript & Materialize.</p>
+                        <p><a href="https://hellovolcano.github.io/random-movie-recs" target="_blank">View >></a></p>
+                    </div>
                 </div>
                 <div class="sample">
-                    <h3>
-                        Track Stream
-                    </h3>
-                    <p class="overview">Track Stream is a full-stack web application that keeys track of a user's streaming service subscriptionn, and offers a visualization of monthly spend on those services. The app follows the MVC design pattern, leveraging Node.js, Express, MySQL/Sequelize, and Handlebars.</p>
-                    <a href="https://github.com/hellovolcano/streaming-service-tracker" target="_blank"><img src="assets/images/Track-Stream.png" alt="Screenshot of my second project"></a>
+                    <img src="assets/images/Track-Stream.png" alt="Screenshot of my second project">
+                    <div class="sample-text">
+                        <h3>
+                            Track Stream
+                        </h3>
+                        <p class="overview">Track Stream is a full-stack web application that keeys track of a user's streaming service subscriptionn, and offers a visualization of monthly spend on those services. The app follows the MVC design pattern, leveraging Node.js, Express, MySQL/Sequelize, and Handlebars.</p>
+                        <a href="https://github.com/hellovolcano/streaming-service-tracker" target="_blank">View >></a>
+                    </div>
                 </div>
                 <div class="sample">
-                    <h3>
-                        Project 3
-                    </h3>
-                    <p class="overview">Lorem ipsum blah blah blah blah blah blah blah</p>
-                    <a href="#" target="_blank"><img src="assets/images/placeholder.png" alt="Screenshot of my second project"></a>
+                    <img src="assets/images/placeholder.png" alt="Screenshot of my second project">
+                    <div class="sample-text">
+                        <h3>
+                            Project 3
+                        </h3>
+                        <p class="overview">Lorem ipsum blah blah blah blah blah blah blah</p>
+                        <a href="#" target="_blank"></a>
+                    </div>
                 </div>
                 <div class="sample">
-                    <h3>
-                        Project 4
-                    </h3>
-                    <p class="overview">Lorem ipsum blah blah blah blah blah blah blah</p>
-                    <a href="#" target="_blank"><img src="assets/images/placeholder.png" alt="Screenshot of my second project"></a>
-                </div>
-                <div class="sample">
-                    <h3>
-                        Project 5
-                    </h3>
-                    <p class="overview">Lorem ipsum blah blah blah blah blah blah blah</p>
-                    <a href="#" target="_blank"><img src="assets/images/placeholder.png" alt="Screenshot of my second project"></a>
+                    <img src="assets/images/placeholder.png" alt="Screenshot of my second project">
+                    <div class="sample-text">
+                        <h3>
+                            Project 4
+                        </h3>
+                        <p class="overview">Lorem ipsum blah blah blah blah blah blah blah</p>
+                        <a href="#" target="_blank"></a>
+                    </div>
                 </div>
             </div>
         </section>
